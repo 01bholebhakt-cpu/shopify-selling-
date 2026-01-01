@@ -1,0 +1,26 @@
+{
+"sections": {
+"hero": { "type": "hero" },
+"trust": { "type": "trust" },
+"featured": { "type": "featured-products" }
+},
+"order": ["hero","trust","featured"]
+}
+
+
+==============================
+sections/header.liquid
+==============================
+<header class="header">
+<div class="wrap">
+<div class="logo">{{ shop.name }}</div>
+<nav>
+<a href="/collections/all">Shop</a>
+<a href="/pages/about">About</a>
+<a href="/cart">Cart ({{ cart.item_count }})</a>
+</nav>
+</div>
+</header>
+
+
+{% schema %}{"name":"Header","settings":[]}{% endschema %}
