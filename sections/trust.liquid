@@ -1,0 +1,30 @@
+<section class="trust">
+<div class="wrap grid">
+<div>Free Shipping</div>
+<div>Secure Payments</div>
+<div>24/7 Support</div>
+</div>
+</section>
+
+
+{% schema %}{"name":"Trust","settings":[]}{% endschema %}
+
+
+==============================
+sections/featured-products.liquid
+==============================
+<section class="featured">
+<div class="wrap grid">
+{% for product in collections.all.products limit:4 %}
+<div class="card">
+<img src="{{ product.featured_image | image_url: width: 600 }}" alt="{{ product.title }}">
+<h3>{{ product.title }}</h3>
+<p>{{ product.price | money }}</p>
+<a class="btn" href="{{ product.url }}">Buy</a>
+</div>
+{% endfor %}
+</div>
+</section>
+
+
+{% schema %}{"name":"Featured products","settings":[]}{% endschema %}
