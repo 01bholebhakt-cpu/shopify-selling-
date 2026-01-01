@@ -1,0 +1,8 @@
+[
+{
+"name": "Brand",
+"settings": [
+{"type":"color","id":"accent","label":"Accent","default":"#ffffff"}
+]
+}
+]
